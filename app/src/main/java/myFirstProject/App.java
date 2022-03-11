@@ -16,13 +16,13 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!";
+        return "Hello World! 00.55";
     }
 
     public static void main(String[] args) {
 
         port(getHerokuAssignedPort());
-        get("/", (req, res) -> "Hello, World");
+        get("/", (req, res) -> "Hello, World 00.55");
 
         post("/compute", (req, res) -> {
         System.out.println(req.queryParams("input1"));
