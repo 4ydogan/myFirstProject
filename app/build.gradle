@@ -40,7 +40,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'FirstProject.App'
+    mainClass = 'myFirstProject.App'
 }
 
 tasks.named('test') {
