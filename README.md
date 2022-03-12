@@ -4,4 +4,4 @@ Demo Site: https://evening-sierra-17380.herokuapp.com/
 
 Heroku Git: https://git.heroku.com/evening-sierra-17380.git
 
-Son değişiklik 01.00
+Son değişiklik 23.09
