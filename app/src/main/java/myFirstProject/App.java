@@ -65,6 +65,7 @@ public class App {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
+    // this method compute how many elements in arraylist greater the limitCount
     public static int howManyPositiveElements(ArrayList<Integer> arrayList, int limitCount, Class className) {
         System.out.println("inside howManyPositiveElements method");
 
@@ -73,9 +74,11 @@ public class App {
         int count = 0;
 
         for (int i = 0; i < arrayList.size(); i++) {
-            Number number = arrayList.get(i);
+            if(arrayList.get(i) == null){
+                continue;
+            }
             
-            if(number.doubleValue() > limitCount){
+            if(arrayList.get(i).doubleValue() > limitCount){
                 count++;
             }
         }

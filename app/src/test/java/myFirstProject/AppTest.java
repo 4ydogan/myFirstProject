@@ -11,14 +11,28 @@ import java.util.ArrayList;
 
 class AppTest {
     @Test void howManyPositiveElementsIsTrue() {
-        App classUnderTest = new App();
-
         ArrayList<Integer> myList = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             myList.add(i);
         }
 
-        assertTrue(App.howManyPositiveElements(myList, 98, Integer.class) == 1);
+        assertTrue(App.howManyPositiveElements(myList, 90, Integer.class) == 9);
+        assertFalse(App.howManyPositiveElements(myList, 0, Integer.class) < 99);
+    }
+
+    @Test void howManyPositiveElementsNullList() {
+        ArrayList<Integer> myList = null;
+
+        assertTrue(App.howManyPositiveElements(myList, 90, Integer.class) == 0);
+    }
+
+    @Test void howManyPositiveElementsNullElements() {
+        ArrayList<Integer> myList = new ArrayList<>();
+
+        for (int i = 0; i < 100; i++) {
+            myList.add(null);
+        }
+        assertTrue(App.howManyPositiveElements(myList, 90, Integer.class) == 0);
     }
 }
