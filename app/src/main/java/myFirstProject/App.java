@@ -44,6 +44,7 @@ public class App {
 
         Map<String, Integer> map = new HashMap<String, Integer>();
             map.put("result", result);
+            map.put("limitNumber", input2AsInt);
             return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
 
