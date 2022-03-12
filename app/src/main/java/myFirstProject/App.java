@@ -27,7 +27,7 @@ public class App {
         String input1 = req.queryParams("input1");
         java.util.Scanner sc1 = new java.util.Scanner(input1);
         sc1.useDelimiter("[;\r\n]+");
-        java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
+        java.util.ArrayList<Number> inputList = new java.util.ArrayList<>();
         while (sc1.hasNext())
         {
             int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
@@ -66,7 +66,7 @@ public class App {
     }
 
     // this method compute how many elements in arraylist greater the limitCount
-    public static int howManyPositiveElements(ArrayList<Integer> arrayList, int limitCount, Class className) {
+    public static int howManyPositiveElements(ArrayList<Number> arrayList, int limitCount, Class className) {
         System.out.println("inside howManyPositiveElements method");
 
         if (arrayList == null) return 0;

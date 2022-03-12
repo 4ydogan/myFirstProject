@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 class AppTest {
     @Test void howManyPositiveElementsIsTrue() {
-        ArrayList<Integer> myList = new ArrayList<>();
+        ArrayList<Number> myList = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             myList.add(i);
@@ -22,13 +22,13 @@ class AppTest {
     }
 
     @Test void howManyPositiveElementsNullList() {
-        ArrayList<Integer> myList = null;
+        ArrayList<Number> myList = null;
 
         assertTrue(App.howManyPositiveElements(myList, 90, Integer.class) == 0);
     }
 
     @Test void howManyPositiveElementsNullElements() {
-        ArrayList<Integer> myList = new ArrayList<>();
+        ArrayList<Number> myList = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             myList.add(null);
