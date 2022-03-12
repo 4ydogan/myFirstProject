@@ -15,14 +15,10 @@ import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World! 00.55";
-    }
-
     public static void main(String[] args) {
 
         port(getHerokuAssignedPort());
-        get("/", (req, res) -> "Hello, World 00.55");
+        get("/", (req, res) -> "Hello, World");
 
         post("/compute", (req, res) -> {
         System.out.println(req.queryParams("input1"));
