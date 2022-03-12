@@ -19,6 +19,6 @@ class AppTest {
             myList.add(i);
         }
 
-        assertTrue(App.howManyPositiveElements(myList, 98, Integer.class) == 1);
+        assertTrue(App.howManyPositiveElements(myList, 99, Integer.class) == 0);
     }
 }
