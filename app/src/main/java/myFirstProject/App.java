@@ -42,9 +42,9 @@ public class App {
 
         int result = App.howManyPositiveElements(inputList, input2AsInt, Integer.class);
 
-        Map<String, Integer> map = new HashMap<String, Integer>();
-            map.put("result", result);
-            map.put("limitNumber", input2AsInt);
+        Map<String, String> map = new HashMap<String, String>();
+            map.put("result", result + "");
+            map.put("message", "number that is greater than " + input2AsInt);
             return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
 
@@ -52,7 +52,7 @@ public class App {
         get("/compute",
         (rq, rs) -> {
             Map<String, String> map = new HashMap<String, String>();
-            map.put("result", "not computed yet!");
+            map.put("result", "no computation yet!");
             return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
     }
