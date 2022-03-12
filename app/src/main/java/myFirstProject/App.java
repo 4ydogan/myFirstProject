@@ -40,9 +40,9 @@ public class App {
         String input2 = req.queryParams("input2").replaceAll("\\s","");
         int input2AsInt = Integer.parseInt(input2);
 
-        boolean result = App.search(inputList, input2AsInt);
+        int result = App.howManyPositiveElements(inputList, input2AsInt, Integer.class);
 
-        Map<String, Boolean> map = new HashMap<String, Boolean>();
+        Map<String, Integer> map = new HashMap<String, Integer>();
             map.put("result", result);
             return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
@@ -64,13 +64,13 @@ public class App {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
-    public static boolean search(ArrayList<Integer> array, int e) {
-        System.out.println("inside search");
-        if (array == null) return false;
-  
-        for (int elt : array) {
-          if (elt == e) return true;
-        }
-        return false;
-      }
+    public static int howManyPositiveElements(ArrayList arrayList, int limitCount, Class className) {
+        System.out.println("inside howManyPositiveElements method");
+
+        if (arrayList == null) return 0;
+
+        int count = 0;
+
+        return count;
+    }
 }
