@@ -33,6 +33,8 @@ class AppTest {
         for (int i = 0; i < 100; i++) {
             myList.add(null);
         }
+
         assertTrue(App.howManyPositiveElements(myList, 90, Integer.class) == 0);
+        assertFalse(App.howManyPositiveElements(myList, 90, Integer.class) != 0);
     }
 }
