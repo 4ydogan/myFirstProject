@@ -65,12 +65,20 @@ public class App {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
-    public static int howManyPositiveElements(ArrayList arrayList, int limitCount, Class className) {
+    public static int howManyPositiveElements(ArrayList<Integer> arrayList, int limitCount, Class className) {
         System.out.println("inside howManyPositiveElements method");
 
         if (arrayList == null) return 0;
 
         int count = 0;
+
+        for (int i = 0; i < arrayList.size(); i++) {
+            Number number = arrayList.get(i);
+            
+            if(number.doubleValue() > limitCount){
+                count++;
+            }
+        }
 
         return count;
     }
