@@ -18,6 +18,15 @@ class AppTest {
         }
 
         assertTrue(App.howManyPositiveElements(myList, 90, Integer.class) == 9);
+    }
+
+    @Test void howManyPositiveElementsIsFalse() {
+        ArrayList<Number> myList = new ArrayList<>();
+
+        for (int i = 0; i < 100; i++) {
+            myList.add(i);
+        }
+
         assertFalse(App.howManyPositiveElements(myList, 0, Integer.class) < 99);
     }
 
