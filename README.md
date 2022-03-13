@@ -2,6 +2,6 @@
 
 Demo Site: https://evening-sierra-17380.herokuapp.com/
 
-Heroku Git: https://git.heroku.com/evening-sierra-17380.git
+Compute Page: https://evening-sierra-17380.herokuapp.com/compute
 
-Son değişiklik 00.36
+Heroku Git: https://git.heroku.com/evening-sierra-17380.git
