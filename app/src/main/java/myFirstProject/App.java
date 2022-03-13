@@ -38,13 +38,13 @@ public class App {
 
 
         String input2 = req.queryParams("input2").replaceAll("\\s","");
-        int input2AsInt = Integer.parseInt(input2);
+        double input2AsDouble = Double.parseDouble(input2);
 
-        int result = App.howManyPositiveElements(inputList, input2AsInt, Integer.class);
+        int result = App.howManyPositiveElements(inputList, input2AsDouble, Integer.class);
 
         Map<String, String> map = new HashMap<String, String>();
             map.put("result", result + "");
-            map.put("message", "number that is greater than " + input2AsInt);
+            map.put("message", "number that is greater than " + input2AsDouble);
             return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
 
@@ -69,20 +69,26 @@ public class App {
     public static int howManyPositiveElements(ArrayList<Number> arrayList, int limitCount, Class className) {
         System.out.println("inside howManyPositiveElements method");
 
+        // if arrayLis is null
         if (arrayList == null) return 0;
 
         int count = 0;
 
+        // pass on the arrayList, to compute how many positive elements are there
         for (int i = 0; i < arrayList.size(); i++) {
+
+            // if the element is null, no increase
             if(arrayList.get(i) == null){
                 continue;
             }
             
+            // if the element is not null, increase the count
             if(arrayList.get(i).doubleValue() > limitCount){
                 count++;
             }
         }
 
+        // return the count
         return count;
     }
 }
