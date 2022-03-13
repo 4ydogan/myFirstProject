@@ -8,5 +8,4 @@ build
 *.classpath
 *.project
 app/bin/*
-app/build/*
 .vscode/*
