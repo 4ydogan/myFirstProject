@@ -7,5 +7,6 @@ build
 *.settings
 *.classpath
 *.project
-bin/*
+app/bin/*
+app/build/*
 .vscode/*
