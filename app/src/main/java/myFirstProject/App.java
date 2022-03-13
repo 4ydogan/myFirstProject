@@ -66,7 +66,7 @@ public class App {
     }
 
     // this method compute how many elements in arraylist greater the limitCount
-    public static int howManyPositiveElements(ArrayList<Number> arrayList, int limitCount, Class className) {
+    public static int howManyPositiveElements(ArrayList<Number> arrayList, double limitCount, Class className) {
         System.out.println("inside howManyPositiveElements method");
 
         // if arrayLis is null
