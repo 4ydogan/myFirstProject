@@ -18,7 +18,11 @@ public class App {
     public static void main(String[] args) {
 
         port(getHerokuAssignedPort());
-        get("/", (req, res) -> "Mustafa Aydoğan 191101002");
+        get("/", (req, res) -> {
+            Map<String, String> map = new HashMap<String, String>();
+            map.put("name", "Mustafa Aydoğan");
+            return new ModelAndView(map, "home.mustache");
+        }, new MustacheTemplateEngine());
 
         post("/compute", (req, res) -> {
         System.out.println(req.queryParams("input1"));
