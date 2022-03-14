@@ -40,7 +40,6 @@ public class App {
         sc1.close();
         System.out.println(inputList);
 
-
         String input2 = req.queryParams("input2").replaceAll("\\s","");
         double input2AsDouble = Double.parseDouble(input2);
 

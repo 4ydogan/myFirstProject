@@ -1,17 +1,16 @@
 <body style="background-color:#F0FFFF;">
       <title>My First Project</title>
       <h1 style="color:#29a329;text-align:center;">Welcome to Compute Page!</h1>
-      <p style="text-align:center;" face="Verdana">
-      There is {{result}} {{message}}<br>
-      </p>
       <p style="text-align:center;">This compute method computes that <br>how many elements in list are greater than a specific number.<br></p>
 
       <form style="text-align: center;" action="compute" method="post">
-            <p style="text-align:center;"><strong>Enter a set of numbers as one number per line:<br></strong></p>
+            <p style="text-align:center;"><strong>Enter a list of numbers as one number per line:<br></strong></p>
             <textarea name="input1" rows="10" cols="30"></textarea>
             <br>
             <p style="text-align:center;"><strong>Enter a number:<br></strong></p>
             <textarea name="input2" rows="3" cols="30"></textarea>
+            <br>
+            <p style="text-align:center;">There is {{result}} {{message}}<br></p>
             <br>
             <br>
             <input type="submit" value="Compute">
