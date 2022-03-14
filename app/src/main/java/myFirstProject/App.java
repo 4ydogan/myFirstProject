@@ -49,6 +49,8 @@ public class App {
         Map<String, String> map = new HashMap<String, String>();
             map.put("result", result + "");
             map.put("message", "number that is greater than " + input2AsDouble);
+            map.put("list", inputList.toString());
+            map.put("input2AsDouble", input2AsDouble + "");
             return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
 
